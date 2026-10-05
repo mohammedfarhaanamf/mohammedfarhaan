@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Farhaan A | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="toast-container"></div>
+
+    <nav class="navbar glass">
+        <div class="nav-brand">
+            <span class="logo">MF<span class="accent">.</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#pipeline">Pipeline</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer glass">
+        <div class="drawer-header">
+            <button class="icon-btn close-drawer"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="drawer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#pipeline">Pipeline</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button id="mobile-theme-toggle" class="theme-toggle-text">Toggle Light/Dark Theme</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content reveal">
+                <div class="greeting">Hello World, I am</div>
+                <h1 class="glitch" data-text="Mohammed Farhaan A">Mohammed Farhaan A</h1>
+                <h2 class="subtitle">B.Sc Computer Science | AI-Assisted Full-Stack Developer & Data Analyst</h2>
+                <p class="tagline">"Bridging AI Prompt Engineering with Fundamental Code & Pure Data Analytics to Build
+                    Production-Ready Apps."</p>
+
+                <div class="badges">
+                    <a href="tel:+919150141913" class="badge" onclick="showToast('Calling...', 'info')"><i
+                            class="fas fa-phone"></i> +91 9150141913</a>
+                    <a href="https://wa.me/919150141913" target="_blank" class="badge"
+                        onclick="showToast('Opening WhatsApp', 'info')"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="mailto:mohammedfarhaanamf@gmail.com" class="badge"
+                        onclick="showToast('Opening Mail Client', 'info')"><i class="fas fa-envelope"></i> Email Me</a>
+                    <a href="https://instagram.com/drag_haan" target="_blank" class="badge"><i
+                            class="fab fa-instagram"></i> @drag_haan</a>
+                    <a href="https://github.com/mohammedfarhaanamf" target="_blank" class="badge"><i
+                            class="fab fa-github"></i> GitHub</a>
+                </div>
+
+                <div class="cta-group">
+                    <a href="#projects" class="btn primary-btn">Explore My Work</a>
+                    <button class="btn secondary-btn" onclick="showToast('Resume download started!', 'success')"><i
+                            class="fas fa-download"></i> Download Resume</button>
+                </div>
+            </div>
+            <div class="hero-graphic reveal-right">
+                <div class="cyber-circle"></div>
+                <div class="cyber-circle-2"></div>
+                <div class="floating-tech"><i class="fas fa-code"></i></div>
+                <div class="floating-tech tech-2"><i class="fas fa-database"></i></div>
+                <div class="floating-tech tech-3"><i class="fas fa-robot"></i></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title reveal">Initialize<span class="accent">_</span>Profile</h2>
+            <div class="about-grid">
+                <div class="bio-card glass reveal">
+                    <p>"A fast-learning B.Sc Computer Science graduate (Madras University, 0 backlogs) specializing in
+                        prompt engineering to accelerate app development, while leveraging core programming fundamentals
+                        (Java, Python, SQL) to debug, optimize, and maintain high code quality."</p>
+                    <div class="meta-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu (Open to Remote)</span>
+                        <span><i class="fas fa-language"></i> English, Tamil, Hindi, Urdu</span>
+                    </div>
+                </div>
+
+                <div class="traits-container reveal-right">
+                    <h3>Personal Core Modules</h3>
+                    <div class="traits">
+                        <div class="trait-card glass">Team Collaboration</div>
+                        <div class="trait-card glass">Efficient Time Management</div>
+                        <div class="trait-card glass">Calamity & Stress Handling</div>
+                        <div class="trait-card glass">Quick Learner & Curiosity</div>
+                        <div class="trait-card glass">Loyalty & Commitment</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section -->
+        <section id="pipeline" class="pipeline">
+            <h2 class="section-title reveal">AI<span class="accent">_</span>Deployment_Matrix</h2>
+            <div class="pipeline-container reveal">
+                <div class="step glass">
+                    <div class="step-icon"><i class="fas fa-comment-dots"></i></div>
+                    <h4>Step 1: Prompt Context Design</h4>
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="step glass">
+                    <div class="step-icon"><i class="fas fa-magic"></i></div>
+                    <h4>Step 2: Code Gen & AI Refactoring</h4>
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="step glass">
+                    <div class="step-icon"><i class="fas fa-bug"></i></div>
+                    <h4>Step 3: Fundamental Debugging (Java/Python/SQL)</h4>
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="step glass">
+                    <div class="step-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <h4>Step 4: Git Push & Cloud Deploy (Vercel/Netlify)</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2 class="section-title reveal">Skill<span class="accent">_</span>Matrix</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass reveal">
+                    <div class="category-header">
+                        <i class="fas fa-robot accent"></i>
+                        <h3>AI & Prompting</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Prompt Tuning</li>
+                        <li>System Context Design</li>
+                        <li>AI Refactoring</li>
+                        <li>Debugging</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass reveal">
+                    <div class="category-header">
+                        <i class="fas fa-layer-group accent"></i>
+                        <h3>Full-Stack & App Dev</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>React, Flutter</li>
+                        <li>Java, Python</li>
+                        <li>HTML, CSS/Tailwind</li>
+                        <li>.NET</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass reveal">
+                    <div class="category-header">
+                        <i class="fas fa-chart-line accent"></i>
+                        <h3>Data Analytics</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Microsoft Excel (Advanced)</li>
+                        <li>Power BI (Dashboards)</li>
+                        <li>Reporting</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass reveal">
+                    <div class="category-header">
+                        <i class="fas fa-database accent"></i>
+                        <h3>Databases & Cloud</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>SQL</li>
+                        <li>Supabase, Firebase</li>
+                        <li>Git & GitHub</li>
+                        <li>Vercel, Netlify</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2 class="section-title reveal">Execute<span class="accent">_</span>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card glass reveal">
+                    <div class="project-content">
+                        <h3>Process Recorder Mobile App</h3>
+                        <p>Automated workflow and process recording mobile application.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span>
+                            <span>Gradle</span>
+                            <span>Antigravity (AI)</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn secondary-btn"
+                                onclick="showToast('Opening Live Preview...', 'info')">Live Preview</button>
+                            <button class="btn secondary-btn outline"
+                                onclick="showToast('Accessing Source Code...', 'info')"><i class="fab fa-github"></i>
+                                Source Code</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass reveal">
+                    <div class="project-content">
+                        <h3>Commercial Mobile Shop E-Commerce</h3>
+                        <p>Active production web application built for a local client mobile shop. Live usage ready.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>CSS</span>
+                            <span>Vercel/Netlify</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn secondary-btn"
+                                onclick="showToast('Redirecting to E-Commerce site...', 'info')">Live Preview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Education -->
+        <section id="certifications" class="certifications reveal">
+            <h2 class="section-title">Sys<span class="accent">_</span>Logs (Certifications & Education)</h2>
+            <div class="milestones-timeline">
+                <div class="milestone glass">
+                    <div class="milestone-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="milestone-content">
+                        <h4>Naan Mudhalvan Data Analytics Certification</h4>
+                        <p>Government Certification - Excel & Power BI mastery.</p>
+                    </div>
+                </div>
+                <div class="milestone glass">
+                    <div class="milestone-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="milestone-content">
+                        <h4>B.Sc Computer Science</h4>
+                        <p>Sree Muthukumaraswamy College (University of Madras)<br>Class of 2026 • First Class • Zero
+                            Backlogs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="hobbies">
+            <h2 class="section-title reveal">Idle<span class="accent">_</span>Processes (Hobbies)</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card glass reveal">
+                    <div class="hobby-icon">♟️</div>
+                    <h4>Chess</h4>
+                    <p>Strategic thinking & tactics</p>
+                </div>
+                <div class="hobby-card glass reveal">
+                    <div class="hobby-icon">🥋</div>
+                    <h4>Nunchaku</h4>
+                    <p>Focus, discipline & agility</p>
+                </div>
+                <div class="hobby-card glass reveal">
+                    <div class="hobby-icon">⚔️</div>
+                    <h4>Clash of Clans</h4>
+                    <p>Team strategy & resource management</p>
+                </div>
+                <div class="hobby-card glass reveal">
+                    <div class="hobby-icon">🐞</div>
+                    <h4>Code Debugging</h4>
+                    <p>Bug hunting & optimization</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact reveal">
+            <h2 class="section-title">Ping<span class="accent">_</span>Me</h2>
+            <div class="contact-container glass">
+                <form id="contact-form"
+                    onsubmit="event.preventDefault(); showToast('Message Sent Successfully!', 'success'); this.reset();">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required class="glass-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required class="glass-input">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" rows="5" required class="glass-input"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn btn-block">Send Transmission <i
+                            class="fas fa-paper-plane"></i></button>
+                </form>
+
+                <div class="contact-info">
+                    <a href="tel:+919150141913" class="contact-link" onclick="showToast('Calling...', 'info')">
+                        <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                        <span>+91 9150141913</span>
+                    </a>
+                    <a href="https://wa.me/919150141913" target="_blank" class="contact-link"
+                        onclick="showToast('Opening WhatsApp', 'info')">
+                        <div class="icon-circle"><i class="fab fa-whatsapp"></i></div>
+                        <span>WhatsApp Me</span>
+                    </a>
+                    <div class="social-links-contact">
+                        <a href="mailto:mohammedfarhaanamf@gmail.com" class="icon-btn"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="https://instagram.com/drag_haan" target="_blank" class="icon-btn"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/mohammedfarhaanamf" target="_blank" class="icon-btn"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mohammed Farhaan A. Designed with AI Assistance.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
