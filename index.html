@@ -1,342 +1,313 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Farhaan A | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mohammed Farhaan A — Portfolio</title>
+    <meta name="description" content="Portfolio of Mohammed Farhaan A — AI-Assisted Developer & Data Analyst.">
+
+    <!-- Fonts: Raleway (Headings), Playfair Display (Italic Subheadings), Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div id="toast-container"></div>
 
-    <nav class="navbar glass">
-        <div class="nav-brand">
-            <span class="logo">MF<span class="accent">.</span></span>
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#pipeline">Pipeline</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
-                <i class="fas fa-moon"></i>
+    <!-- ══ Cinematic Nature Fog Background ══ -->
+    <div id="vanta-bg" aria-hidden="true"></div>
+
+    <!-- ══ Navigation ══ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">MF<span class="accent">.</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#credentials">Certifications</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
             </button>
-        </div>
-        <div class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
         </div>
     </nav>
 
-    <!-- Mobile Drawer -->
-    <div class="mobile-drawer glass">
-        <div class="drawer-header">
-            <button class="icon-btn close-drawer"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="drawer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#pipeline">Pipeline</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <button id="mobile-theme-toggle" class="theme-toggle-text">Toggle Light/Dark Theme</button>
-        </div>
-    </div>
+    <!-- ══ Mobile Drawer ══ -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <aside class="mobile-drawer" id="mobile-drawer">
+        <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#skills" class="drawer-link">Skills</a>
+        <a href="#projects" class="drawer-link">Projects</a>
+        <a href="#credentials" class="drawer-link">Certifications</a>
+        <a href="#contact" class="drawer-link">Contact</a>
+    </aside>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content reveal">
-                <div class="greeting">Hello World, I am</div>
-                <h1 class="glitch" data-text="Mohammed Farhaan A">Mohammed Farhaan A</h1>
-                <h2 class="subtitle">B.Sc Computer Science | AI-Assisted Full-Stack Developer & Data Analyst</h2>
-                <p class="tagline">"Bridging AI Prompt Engineering with Fundamental Code & Pure Data Analytics to Build
-                    Production-Ready Apps."</p>
-
-                <div class="badges">
-                    <a href="tel:+919150141913" class="badge" onclick="showToast('Calling...', 'info')"><i
-                            class="fas fa-phone"></i> +91 9150141913</a>
-                    <a href="https://wa.me/919150141913" target="_blank" class="badge"
-                        onclick="showToast('Opening WhatsApp', 'info')"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    <a href="mailto:mohammedfarhaanamf@gmail.com" class="badge"
-                        onclick="showToast('Opening Mail Client', 'info')"><i class="fas fa-envelope"></i> Email Me</a>
-                    <a href="https://instagram.com/drag_haan" target="_blank" class="badge"><i
-                            class="fab fa-instagram"></i> @drag_haan</a>
-                    <a href="https://github.com/mohammedfarhaanamf" target="_blank" class="badge"><i
-                            class="fab fa-github"></i> GitHub</a>
+        <!-- ══════════════════════════════════════════
+             SECTION 1: HERO
+             ══════════════════════════════════════════ -->
+        <section id="hero" class="hero">
+            <div class="hero-inner">
+                <p class="hero-pre anim" data-d="0">PORTFOLIO OF</p>
+                <h1 class="hero-name anim" data-d="1">MOHAMMED FARHAAN <span class="dot">.</span> A</h1>
+                
+                <div class="hero-divider anim" data-d="2">
+                    <span class="line"></span>
+                    <svg class="divider-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 22h20L12 2z"/></svg>
+                    <span class="line"></span>
                 </div>
 
-                <div class="cta-group">
-                    <a href="#projects" class="btn primary-btn">Explore My Work</a>
-                    <button class="btn secondary-btn" onclick="showToast('Resume download started!', 'success')"><i
-                            class="fas fa-download"></i> Download Resume</button>
-                </div>
-            </div>
-            <div class="hero-graphic reveal-right">
-                <div class="cyber-circle"></div>
-                <div class="cyber-circle-2"></div>
-                <div class="floating-tech"><i class="fas fa-code"></i></div>
-                <div class="floating-tech tech-2"><i class="fas fa-database"></i></div>
-                <div class="floating-tech tech-3"><i class="fas fa-robot"></i></div>
-            </div>
-        </section>
+                <h2 class="hero-role anim" data-d="3">B.Sc. Computer Science (2026 First Class &amp; 0 Backlogs) | AI-Assisted Full-Stack Developer &amp; Data Analyst</h2>
+                <p class="hero-tagline anim" style="font-family: var(--font-body); font-size: 0.9rem; color: var(--muted); max-width: 650px; margin: 0 auto 2.5rem;" data-d="4">Bridging AI Prompt Architecture, Fundamental Engineering, and Pure Data Analytics to Build High-Performance Digital Solutions.</p>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <h2 class="section-title reveal">Initialize<span class="accent">_</span>Profile</h2>
-            <div class="about-grid">
-                <div class="bio-card glass reveal">
-                    <p>"A fast-learning B.Sc Computer Science graduate (Madras University, 0 backlogs) specializing in
-                        prompt engineering to accelerate app development, while leveraging core programming fundamentals
-                        (Java, Python, SQL) to debug, optimize, and maintain high code quality."</p>
-                    <div class="meta-info">
-                        <span><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu (Open to Remote)</span>
-                        <span><i class="fas fa-language"></i> English, Tamil, Hindi, Urdu</span>
-                    </div>
+                <div class="hero-cta anim" data-d="5">
+                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                    <button id="resume-btn" class="btn btn-outline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download Resume (PDF)
+                    </button>
                 </div>
 
-                <div class="traits-container reveal-right">
-                    <h3>Personal Core Modules</h3>
-                    <div class="traits">
-                        <div class="trait-card glass">Team Collaboration</div>
-                        <div class="trait-card glass">Efficient Time Management</div>
-                        <div class="trait-card glass">Calamity & Stress Handling</div>
-                        <div class="trait-card glass">Quick Learner & Curiosity</div>
-                        <div class="trait-card glass">Loyalty & Commitment</div>
-                    </div>
+                <div class="badge-bar anim" data-d="5">
+                    <a href="tel:+919150141913" class="badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        +91 9150141913
+                    </a>
+                    <a href="https://wa.me/919150141913" target="_blank" rel="noopener" class="badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Chat on WhatsApp
+                    </a>
+                    <a href="mailto:mohammedfarhaanamf@gmail.com" class="badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        mohammedfarhaanamf@gmail.com
+                    </a>
+                    <a href="https://instagram.com/drag_haan" target="_blank" rel="noopener" class="badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        @drag_haan
+                    </a>
+                    <a href="https://github.com/mohammedfarhaanamf/mohammedfarhaan" target="_blank" rel="noopener" class="badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        farhaan022004
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Pipeline Section -->
-        <section id="pipeline" class="pipeline">
-            <h2 class="section-title reveal">AI<span class="accent">_</span>Deployment_Matrix</h2>
-            <div class="pipeline-container reveal">
-                <div class="step glass">
-                    <div class="step-icon"><i class="fas fa-comment-dots"></i></div>
-                    <h4>Step 1: Prompt Context Design</h4>
+        <!-- ══════════════════════════════════════════
+             SECTION 2: ABOUT / PERSONAL
+             ══════════════════════════════════════════ -->
+        <section id="about" class="section">
+            <h2 class="sec-title reveal">Personal &amp; Background Details</h2>
+
+            <div class="card about-card reveal" style="text-align: left;">
+                <ul class="skill-list" style="list-style:none; padding-left:0;">
+                    <li style="padding-left:0;"><strong>Full Name:</strong> Mohammed Farhaan . A</li>
+                    <li style="padding-left:0;"><strong>Date of Birth:</strong> September 2, 2004</li>
+                    <li style="padding-left:0;"><strong>Location:</strong> Chennai, Tamil Nadu (Open to Remote Roles)</li>
+                    <li style="padding-left:0;"><strong>Languages Spoken:</strong> English, Tamil, Hindi, Urdu</li>
+                    <li style="padding-left:0;"><strong>Education:</strong> B.Sc. Computer Science (Passed out in 2026 with First Class &amp; 0 Backlogs)</li>
+                    <li style="padding-left:0;"><strong>College &amp; University:</strong> Sree Muthukumaraswamy College (Affiliated with University of Madras)</li>
+                </ul>
+            </div>
+
+            <h3 class="sub-title reveal">Soft Skills &amp; Key Trait Values</h3>
+            <div class="values-grid">
+                <div class="card value-card reveal">
+                    <h4>Team Collaboration</h4>
+                    <p>Seamless communication and active teamwork.</p>
                 </div>
-                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
-                <div class="step glass">
-                    <div class="step-icon"><i class="fas fa-magic"></i></div>
-                    <h4>Step 2: Code Gen & AI Refactoring</h4>
+                <div class="card value-card reveal">
+                    <h4>Time Management</h4>
+                    <p>Efficient task prioritization and fast delivery.</p>
                 </div>
-                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
-                <div class="step glass">
-                    <div class="step-icon"><i class="fas fa-bug"></i></div>
-                    <h4>Step 3: Fundamental Debugging (Java/Python/SQL)</h4>
+                <div class="card value-card reveal">
+                    <h4>Stress Handling</h4>
+                    <p>Calamity and analytical clarity during high-pressure or bug scenarios.</p>
                 </div>
-                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
-                <div class="step glass">
-                    <div class="step-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                    <h4>Step 4: Git Push & Cloud Deploy (Vercel/Netlify)</h4>
+                <div class="card value-card reveal">
+                    <h4>Quick Learner &amp; Curiosity</h4>
+                    <p>Eager to explore new technologies and continuously adapt.</p>
+                </div>
+                <div class="card value-card reveal">
+                    <h4>Loyalty &amp; Commitment</h4>
+                    <p>Dependable and dedicated to long-term growth and accountability.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <h2 class="section-title reveal">Skill<span class="accent">_</span>Matrix</h2>
+        <!-- ══════════════════════════════════════════
+             SECTION 3: SKILLS MATRIX
+             ══════════════════════════════════════════ -->
+        <section id="skills" class="section">
+            <h2 class="sec-title reveal">Technical Core Skills &amp; Capabilities</h2>
+
             <div class="skills-grid">
-                <div class="skill-category glass reveal">
-                    <div class="category-header">
-                        <i class="fas fa-robot accent"></i>
-                        <h3>AI & Prompting</h3>
-                    </div>
+                <div class="card skill-card reveal">
+                    <h3>AI &amp; Prompt Engineering</h3>
                     <ul class="skill-list">
+                        <li>Prompt Generation</li>
+                        <li>System Context Engineering</li>
                         <li>Prompt Tuning</li>
-                        <li>System Context Design</li>
-                        <li>AI Refactoring</li>
-                        <li>Debugging</li>
+                        <li>AI-assisted web and mobile app development</li>
+                        <li>AI code refactoring</li>
+                        <li>Bug identification</li>
+                        <li>Fundamental level debugging</li>
                     </ul>
                 </div>
-                <div class="skill-category glass reveal">
-                    <div class="category-header">
-                        <i class="fas fa-layer-group accent"></i>
-                        <h3>Full-Stack & App Dev</h3>
+                <div class="card skill-card reveal">
+                    <h3>Programming Fundamentals</h3>
+                    <div class="tags">
+                        <span>Java</span><span>Python</span><span>HTML</span><span>.NET</span><span>JavaScript / React</span>
                     </div>
+                </div>
+                <div class="card skill-card reveal">
+                    <h3>Data Analytics (Pure Non-AI Proficiency)</h3>
                     <ul class="skill-list">
-                        <li>React, Flutter</li>
-                        <li>Java, Python</li>
-                        <li>HTML, CSS/Tailwind</li>
-                        <li>.NET</li>
+                        <li>Advanced Microsoft Excel (Data Manipulation, Formulas, Pivot)</li>
+                        <li>Power BI (Interactive Dashboards, Visualizations, Reports)</li>
                     </ul>
                 </div>
-                <div class="skill-category glass reveal">
-                    <div class="category-header">
-                        <i class="fas fa-chart-line accent"></i>
-                        <h3>Data Analytics</h3>
+                <div class="card skill-card reveal">
+                    <h3>Database Management</h3>
+                    <div class="tags">
+                        <span>SQL</span><span>Supabase</span><span>Firebase</span>
                     </div>
-                    <ul class="skill-list">
-                        <li>Microsoft Excel (Advanced)</li>
-                        <li>Power BI (Dashboards)</li>
-                        <li>Reporting</li>
-                    </ul>
                 </div>
-                <div class="skill-category glass reveal">
-                    <div class="category-header">
-                        <i class="fas fa-database accent"></i>
-                        <h3>Databases & Cloud</h3>
-                    </div>
+                <div class="card skill-card reveal" style="grid-column: 1 / -1;">
+                    <h3>DevOps &amp; Cloud Hosting</h3>
                     <ul class="skill-list">
-                        <li>SQL</li>
-                        <li>Supabase, Firebase</li>
-                        <li>Git & GitHub</li>
-                        <li>Vercel, Netlify</li>
+                        <li><strong>Version Control:</strong> Git &amp; GitHub</li>
+                        <li><strong>Hosting &amp; Deployment:</strong> Vercel &amp; Netlify</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <h2 class="section-title reveal">Execute<span class="accent">_</span>Projects</h2>
+        <!-- ══════════════════════════════════════════
+             SECTION 4: FEATURED PROJECTS
+             ══════════════════════════════════════════ -->
+        <section id="projects" class="section">
+            <h2 class="sec-title reveal">Major Featured Projects</h2>
+
             <div class="projects-grid">
-                <div class="project-card glass reveal">
-                    <div class="project-content">
-                        <h3>Process Recorder Mobile App</h3>
-                        <p>Automated workflow and process recording mobile application.</p>
-                        <div class="tech-stack">
-                            <span>Flutter</span>
-                            <span>Gradle</span>
-                            <span>Antigravity (AI)</span>
-                        </div>
-                        <div class="project-actions">
-                            <button class="btn secondary-btn"
-                                onclick="showToast('Opening Live Preview...', 'info')">Live Preview</button>
-                            <button class="btn secondary-btn outline"
-                                onclick="showToast('Accessing Source Code...', 'info')"><i class="fab fa-github"></i>
-                                Source Code</button>
-                        </div>
+                <div class="card project-card reveal">
+                    <div class="proj-num">01</div>
+                    <h3>Process Recorder Mobile App</h3>
+                    <p><strong>Tech Stack:</strong> Flutter, Gradle, Antigravity (AI-assisted)</p>
+                    <p><strong>Scope:</strong> Automated process recording mobile application for task and workflow tracking.</p>
+                    <div class="proj-actions">
+                        <a href="https://github.com/mohammedfarhaanamf/mohammedfarhaan" target="_blank" rel="noopener" class="btn btn-sm">GitHub Repository</a>
                     </div>
                 </div>
-
-                <div class="project-card glass reveal">
-                    <div class="project-content">
-                        <h3>Commercial Mobile Shop E-Commerce</h3>
-                        <p>Active production web application built for a local client mobile shop. Live usage ready.</p>
-                        <div class="tech-stack">
-                            <span>React</span>
-                            <span>CSS</span>
-                            <span>Vercel/Netlify</span>
-                        </div>
-                        <div class="project-actions">
-                            <button class="btn secondary-btn"
-                                onclick="showToast('Redirecting to E-Commerce site...', 'info')">Live Preview</button>
-                        </div>
+                <div class="card project-card reveal">
+                    <div class="proj-num">02</div>
+                    <h3>Commercial Mobile Shop E-Commerce Website</h3>
+                    <p><strong>Tech Stack:</strong> React, CSS, Vercel/Netlify Deployment</p>
+                    <p><strong>Scope:</strong> Fully functional, active production web application built for a commercial client mobile store.</p>
+                    <div class="proj-actions">
+                        <a href="https://github.com/mohammedfarhaanamf/mohammedfarhaan" target="_blank" rel="noopener" class="btn btn-sm">Visit Project</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications & Education -->
-        <section id="certifications" class="certifications reveal">
-            <h2 class="section-title">Sys<span class="accent">_</span>Logs (Certifications & Education)</h2>
-            <div class="milestones-timeline">
-                <div class="milestone glass">
-                    <div class="milestone-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="milestone-content">
-                        <h4>Naan Mudhalvan Data Analytics Certification</h4>
-                        <p>Government Certification - Excel & Power BI mastery.</p>
+        <!-- ══════════════════════════════════════════
+             SECTION 5: CREDENTIALS & HOBBIES
+             ══════════════════════════════════════════ -->
+        <section id="credentials" class="section">
+            <h2 class="sec-title reveal">Certifications &amp; Credentials</h2>
+
+            <div class="creds-grid">
+                <div class="card cred-card reveal">
+                    <div>
+                        <h4>Data Analytics Certification</h4>
+                        <p>Govt. Certified via Naan Mudhalvan.</p>
                     </div>
                 </div>
-                <div class="milestone glass">
-                    <div class="milestone-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="milestone-content">
-                        <h4>B.Sc Computer Science</h4>
-                        <p>Sree Muthukumaraswamy College (University of Madras)<br>Class of 2026 • First Class • Zero
-                            Backlogs</p>
+                <div class="card cred-card reveal">
+                    <div>
+                        <h4>Academic Qualification</h4>
+                        <p>B.Sc. CS Degree Provisional Certificate (First Class, 0 Backlogs - Madras University).</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Hobbies Section -->
-        <section id="hobbies" class="hobbies">
-            <h2 class="section-title reveal">Idle<span class="accent">_</span>Processes (Hobbies)</h2>
+            <h3 class="sub-title reveal">Hobbies &amp; Personal Interests</h3>
             <div class="hobbies-grid">
-                <div class="hobby-card glass reveal">
-                    <div class="hobby-icon">♟️</div>
+                <div class="card hobby-card reveal">
                     <h4>Chess</h4>
-                    <p>Strategic thinking & tactics</p>
+                    <p>Strategic planning and tactical critical thinking.</p>
                 </div>
-                <div class="hobby-card glass reveal">
-                    <div class="hobby-icon">🥋</div>
+                <div class="card hobby-card reveal">
                     <h4>Nunchaku</h4>
-                    <p>Focus, discipline & agility</p>
+                    <p>Physical discipline, coordination, and focus.</p>
                 </div>
-                <div class="hobby-card glass reveal">
-                    <div class="hobby-icon">⚔️</div>
+                <div class="card hobby-card reveal">
                     <h4>Clash of Clans</h4>
-                    <p>Team strategy & resource management</p>
+                    <p>Strategic team coordination and resource management.</p>
                 </div>
-                <div class="hobby-card glass reveal">
-                    <div class="hobby-icon">🐞</div>
-                    <h4>Code Debugging</h4>
-                    <p>Bug hunting & optimization</p>
+                <div class="card hobby-card reveal">
+                    <h4>Debugging</h4>
+                    <p>Code bug hunting and problem-solving.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact reveal">
-            <h2 class="section-title">Ping<span class="accent">_</span>Me</h2>
-            <div class="contact-container glass">
-                <form id="contact-form"
-                    onsubmit="event.preventDefault(); showToast('Message Sent Successfully!', 'success'); this.reset();">
-                    <div class="form-group">
-                        <input type="text" placeholder="Name" required class="glass-input">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" required class="glass-input">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Message" rows="5" required class="glass-input"></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn btn-block">Send Transmission <i
-                            class="fas fa-paper-plane"></i></button>
+        <!-- ══════════════════════════════════════════
+             SECTION 6: CONTACT / FOOTER
+             ══════════════════════════════════════════ -->
+        <section id="contact" class="section">
+            <h2 class="sec-title reveal">Contact</h2>
+
+            <div class="contact-grid reveal">
+                <form id="contact-form" class="card contact-form">
+                    <input type="text" id="cf-name" placeholder="Name" required autocomplete="name">
+                    <input type="email" id="cf-email" placeholder="Email" required autocomplete="email">
+                    <textarea id="cf-msg" rows="5" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
 
-                <div class="contact-info">
-                    <a href="tel:+919150141913" class="contact-link" onclick="showToast('Calling...', 'info')">
-                        <div class="icon-circle"><i class="fas fa-phone"></i></div>
-                        <span>+91 9150141913</span>
+                <div class="contact-side">
+                    <a href="tel:+919150141913" class="card contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <div><strong>Direct Call</strong><span>+91 9150141913</span></div>
                     </a>
-                    <a href="https://wa.me/919150141913" target="_blank" class="contact-link"
-                        onclick="showToast('Opening WhatsApp', 'info')">
-                        <div class="icon-circle"><i class="fab fa-whatsapp"></i></div>
-                        <span>WhatsApp Me</span>
+                    <a href="https://wa.me/919150141913" target="_blank" rel="noopener" class="card contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                        <div><strong>WhatsApp</strong><span>Chat on WhatsApp</span></div>
                     </a>
-                    <div class="social-links-contact">
-                        <a href="mailto:mohammedfarhaanamf@gmail.com" class="icon-btn"><i
-                                class="fas fa-envelope"></i></a>
-                        <a href="https://instagram.com/drag_haan" target="_blank" class="icon-btn"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/mohammedfarhaanamf" target="_blank" class="icon-btn"><i
-                                class="fab fa-github"></i></a>
-                    </div>
+                    <a href="https://instagram.com/drag_haan" target="_blank" rel="noopener" class="card contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        <div><strong>Instagram</strong><span>@drag_haan</span></div>
+                    </a>
+                    <a href="https://github.com/mohammedfarhaanamf/mohammedfarhaan" target="_blank" rel="noopener" class="card contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <div><strong>GitHub</strong><span>farhaan022004</span></div>
+                    </a>
+                    <a href="mailto:mohammedfarhaanamf@gmail.com" class="card contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <div><strong>Email</strong><span>mohammedfarhaanamf@gmail.com</span></div>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Mohammed Farhaan A. Designed with AI Assistance.</p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2026 Mohammed Farhaan A — Built with Precision.</p>
     </footer>
 
+    <!-- Toast Container -->
+    <div id="toast-box" aria-live="polite"></div>
+
+    <!-- WebGL & PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
