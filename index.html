@@ -15,8 +15,13 @@
 </head>
 <body>
 
-    <!-- ══ Cinematic Nature Fog Background ══ -->
-    <div id="vanta-bg" aria-hidden="true"></div>
+    <!-- ══ Background video ══ -->
+    <div id="vanta-bg" aria-hidden="true">
+        <video autoplay muted loop playsinline>
+            <source src="856309-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+    </div>
+    
 
     <!-- ══ Navigation ══ -->
     <nav id="navbar">
@@ -66,10 +71,10 @@
 
                 <div class="hero-cta anim" data-d="5">
                     <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                    <button id="resume-btn" class="btn btn-outline">
+                    <a href="Mohammed_Farhaan_Resume.pdf" download="Mohammed_Farhaan_Resume.pdf" class="btn btn-outline">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        Download Resume (PDF)
-                    </button>
+                        Download Resume
+                    </a>
                 </div>
 
                 <div class="badge-bar anim" data-d="5">
@@ -222,13 +227,19 @@
             <h2 class="sec-title reveal">Certifications &amp; Credentials</h2>
 
             <div class="creds-grid">
-                <div class="card cred-card reveal">
+                <div class="card cred-card reveal" role="button" tabindex="0" data-img="cert-ai-ml.jpg" data-cert-title="AI, ML &amp; Data Science Internship" aria-label="View AI, ML and Data Science Internship certificate">
+                    <div>
+                        <h4>AI, ML &amp; Data Science Internship</h4>
+                        <p>Completed hands-on Internship in AI, Machine Learning, and Data Science at VIPS Tech.</p>
+                    </div>
+                </div>
+                <div class="card cred-card reveal" role="button" tabindex="0" data-img="cert-data-analytics.jpg" data-cert-title="Data Analytics Certification" aria-label="View Data Analytics Certification">
                     <div>
                         <h4>Data Analytics Certification</h4>
                         <p>Govt. Certified via Naan Mudhalvan.</p>
                     </div>
                 </div>
-                <div class="card cred-card reveal">
+                <div class="card cred-card reveal" role="button" tabindex="0" data-img="cert-provisional.jpg" data-cert-title="Academic Qualification" aria-label="View Academic Qualification certificate">
                     <div>
                         <h4>Academic Qualification</h4>
                         <p>B.Sc. CS Degree Provisional Certificate (First Class, 0 Backlogs - Madras University).</p>
@@ -301,13 +312,22 @@
         <p>&copy; 2026 Mohammed Farhaan A — Built with Precision.</p>
     </footer>
 
+    <!-- Certificate image modal -->
+    <div id="cert-modal" class="cert-modal" aria-hidden="true">
+        <div class="cert-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+            <div class="cert-modal-header">
+                <h3 id="cert-modal-title">Certificate</h3>
+                <button type="button" class="cert-modal-close" id="cert-modal-close" aria-label="Close certificate viewer">&times;</button>
+            </div>
+            <div class="cert-modal-body">
+                <img id="cert-modal-image" alt="Certificate" />
+            </div>
+        </div>
+    </div>
+
     <!-- Toast Container -->
     <div id="toast-box" aria-live="polite"></div>
 
-    <!-- WebGL & PDF Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

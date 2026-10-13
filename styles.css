@@ -2,7 +2,7 @@
    DESIGN TOKENS - DARK MISTY NATURE
    ════════════════════════════════════════════════════════ */
 :root {
-    --bg:          #0B1015; /* Void Slate / Mountain Dark */
+    --bg:          #3A4A58; /* Void Slate / Mountain Dark */
     --card:        #161F28; /* Card Fill */
     --card-a:      rgba(22, 31, 40, 0.65); /* Glassmorphism backdrop */
     --border:      #3A4A58; /* Muted misty silver border */
@@ -47,6 +47,13 @@ strong { color: var(--white); font-weight: 500; }
 #vanta-bg {
     position: fixed; inset: 0;
     z-index: -2; width: 100%; height: 100%;
+    overflow: hidden;
+    background: #0b1015;
+}
+#vanta-bg video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
 body::after {
     content: ''; position: fixed; inset: 0; z-index: -1;
@@ -298,8 +305,149 @@ body::after {
    CREDENTIALS & HOBBIES
    ════════════════════════════════════════════════════════ */
 .creds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.cred-card { cursor: pointer; }
 .cred-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; }
 .cred-card p { font-size: 0.85rem; }
+
+/* Certificate modal */
+.cert-modal {
+    position: fixed; inset: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.25rem;
+    background: rgba(6, 10, 14, 0);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    perspective: 1400px;
+    transition: opacity 0.45s var(--ease-out), visibility 0.45s var(--ease-out),
+                background 0.45s var(--ease-out), backdrop-filter 0.45s var(--ease-out);
+}
+.cert-modal.open {
+    opacity: 1; visibility: visible; pointer-events: auto;
+    background: rgba(6, 10, 14, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.cert-modal.closing {
+    opacity: 0; visibility: hidden; pointer-events: none;
+    background: rgba(6, 10, 14, 0);
+}
+.cert-modal-dialog {
+    position: relative; z-index: 1;
+    width: min(860px, 100%);
+    max-height: 90vh;
+    display: flex; flex-direction: column;
+    background: var(--card);
+    border: 1px solid rgba(138, 226, 254, 0.28);
+    border-radius: 10px;
+    overflow: hidden;
+    transform-origin: center center;
+    box-shadow: 0 0 0 1px rgba(138, 226, 254, 0.08), 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+.cert-modal.open .cert-modal-dialog {
+    animation: certPopIn 0.7s var(--ease-out) both;
+}
+.cert-modal.closing .cert-modal-dialog {
+    animation: certPopOut 0.38s var(--ease) both;
+}
+@keyframes certPopIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(28deg) scale(0.62) translateY(70px);
+        filter: blur(16px) brightness(1.4);
+        box-shadow: 0 0 0 0 var(--accent-glow);
+    }
+    55% {
+        opacity: 1;
+        transform: rotateX(-6deg) scale(1.045) translateY(-8px);
+        filter: blur(0) brightness(1.08);
+        box-shadow: 0 0 40px 8px var(--accent-glow), 0 30px 80px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0) scale(1) translateY(0);
+        filter: blur(0) brightness(1);
+        box-shadow: 0 0 0 1px rgba(138, 226, 254, 0.08), 0 30px 80px rgba(0, 0, 0, 0.55);
+    }
+}
+@keyframes certPopOut {
+    0% {
+        opacity: 1;
+        transform: rotateX(0) scale(1) translateY(0);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: rotateX(12deg) scale(0.86) translateY(40px);
+        filter: blur(10px);
+    }
+}
+.cert-modal-header {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 0.85rem 1.1rem;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    background: rgba(11, 16, 21, 0.55);
+}
+.cert-modal-header h3 {
+    font-size: 0.85rem; font-weight: 400; letter-spacing: 1.5px;
+    text-transform: uppercase; margin: 0;
+}
+.cert-modal-close {
+    background: none; border: none; cursor: pointer;
+    color: var(--muted); font-size: 2rem; font-weight: 200;
+    line-height: 1; padding: 0 0.2rem;
+    transition: color 0.2s ease, transform 0.35s var(--ease-out);
+}
+.cert-modal-close:hover { color: var(--accent); transform: rotate(90deg) scale(1.1); }
+.cert-modal-body {
+    position: relative;
+    flex: 1; min-height: 0;
+    overflow: auto;
+    background: #0b1015;
+    display: flex; align-items: center; justify-content: center;
+}
+.cert-modal-body img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(90vh - 58px);
+    object-fit: contain;
+    background: #fff;
+}
+.cert-modal.open .cert-modal-body img {
+    animation: certImageReveal 0.85s 0.12s var(--ease-out) both;
+}
+@keyframes certImageReveal {
+    0% { opacity: 0; transform: scale(1.12); filter: brightness(1.6) saturate(0.6); }
+    100% { opacity: 1; transform: scale(1); filter: brightness(1) saturate(1); }
+}
+.cert-modal.open .cert-modal-body::after {
+    content: '';
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 30%, rgba(138, 226, 254, 0.22) 48%, transparent 66%);
+    animation: certShine 0.9s 0.28s var(--ease-out) both;
+}
+@keyframes certShine {
+    0% { transform: translateX(-120%); opacity: 0.9; }
+    100% { transform: translateX(120%); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .cert-modal { padding: 0.6rem; }
+    .cert-modal-dialog { max-height: calc(100vh - 1.2rem); border-radius: 8px; }
+    .cert-modal-body img { max-height: calc(100vh - 1.2rem - 54px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cert-modal.open .cert-modal-dialog,
+    .cert-modal.closing .cert-modal-dialog,
+    .cert-modal.open .cert-modal-body img,
+    .cert-modal.open .cert-modal-body::after {
+        animation: none;
+    }
+}
 
 .hobbies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
 .hobby-card { text-align: center; padding: 1.5rem 1rem; }
