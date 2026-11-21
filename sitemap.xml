@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-       <loc>https://mohammedfarhaan.me/</loc>
-       <lastmod>2026-10-13T14:22:21+00:00</lastmod>
-       <priority>1.0000</priority>
+    <loc>https://mohammedfarhaan.me/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mohammedfarhaan.me/mohammed-farhaan-data-scientist.jpg</image:loc>
+      <image:title>Mohammed Farhaan — Data Scientist and AI Enthusiast</image:title>
+      <image:caption>Mohammed Farhaan, Aspiring Data Scientist specializing in Machine Learning, Python, and SQL.</image:caption>
+      <image:geo_location>Chennai, Tamil Nadu, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammedfarhaan.me/profile-portrait.png</image:loc>
+      <image:title>Mohammed Farhaan — Portrait Cutout</image:title>
+      <image:caption>Mohammed Farhaan portrait photograph, Aspiring Data Scientist.</image:caption>
+      <image:geo_location>Chennai, Tamil Nadu, India</image:geo_location>
+    </image:image>
   </url>
   <url>
-       <loc>https://mohammedfarhaan.me/Mohammed_Farhaan_Resume.pdf</loc>
-       <lastmod>2026-10-13T14:22:21+00:00</lastmod>
-       <priority>0.8000</priority>
+    <loc>https://mohammedfarhaan.me/Mohammed_Farhaan_Data_Scientist_Resume.pdf</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammedfarhaan.me/Mohammed_Farhaan_Data_Scientist_Resume.pdf</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammedfarhaan.me/Mohammed_Farhaan_Resume.pdf</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
