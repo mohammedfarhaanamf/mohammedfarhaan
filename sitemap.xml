@@ -3,36 +3,25 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mohammedfarhaan.me/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://mohammedfarhaan.me/mohammed-farhaan-data-scientist.jpg</image:loc>
-      <image:title>Mohammed Farhaan — Data Scientist and AI Enthusiast</image:title>
-      <image:caption>Mohammed Farhaan, Aspiring Data Scientist specializing in Machine Learning, Python, and SQL.</image:caption>
+      <image:title>Mohammed Farhaan — Data Scientist | AI &amp; Machine Learning</image:title>
+      <image:caption>Mohammed Farhaan, Data Scientist and AI enthusiast specializing in Python, SQL, Machine Learning and Data Analytics.</image:caption>
       <image:geo_location>Chennai, Tamil Nadu, India</image:geo_location>
     </image:image>
     <image:image>
       <image:loc>https://mohammedfarhaan.me/profile-portrait.png</image:loc>
       <image:title>Mohammed Farhaan — Portrait Cutout</image:title>
-      <image:caption>Mohammed Farhaan portrait photograph, Aspiring Data Scientist.</image:caption>
+      <image:caption>Mohammed Farhaan portrait photograph, Data Scientist.</image:caption>
       <image:geo_location>Chennai, Tamil Nadu, India</image:geo_location>
     </image:image>
   </url>
   <url>
     <loc>https://mohammedfarhaan.me/Mohammed_Farhaan_Data_Scientist_Resume.pdf</loc>
-    <lastmod>2026-11-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mohammedfarhaan.me/Mohammed_Farhaan_Data_Scientist_Resume.pdf</loc>
-    <lastmod>2026-11-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mohammedfarhaan.me/Mohammed_Farhaan_Resume.pdf</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

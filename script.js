@@ -13,41 +13,37 @@
     /* Email templates */
     var EMAIL_TEMPLATES = {
         hr: {
-            subject: 'Career Opportunity \u2013 Mohammed Farhaan',
+            subject: 'Job Opportunity \u2013 Mohammed Farhaan',
             body: [
                 'Hi Mohammed Farhaan,',
                 '',
-                'We came across your portfolio and are interested in discussing a potential employment opportunity with you.',
-                '',
-                'We would like to connect with you regarding a suitable position in our organisation.',
+                'We came across your portfolio and are interested in discussing an employment opportunity with you.',
                 '',
                 'Company Name:',
-                'Position:',
+                'Position (Data Scientist / AI / Python Developer):',
+                'Job Type (Full-Time / Internship / Remote):',
                 'Job Location:',
                 'Additional Details:',
                 '',
-                'We look forward to hearing from you.',
+                'We look forward to connecting.',
                 '',
                 'Regards,',
-                'HR / Recruitment Team'
+                'Hiring Team / Recruiter'
             ].join('\n')
         },
         freelance: {
-            subject: 'Freelance Project Inquiry \u2013 Mohammed Farhaan',
+            subject: 'Project Inquiry \u2013 Mohammed Farhaan',
             body: [
                 'Hi Mohammed Farhaan,',
                 '',
                 'I came across your portfolio and would like to discuss a project with you.',
                 '',
-                'I am looking for assistance with a project and would love to understand your availability and approach.',
-                '',
-                'Project Name:',
-                'Project Type:',
+                'Project Scope (Data Analytics / Machine Learning / Python / AI Solutions):',
                 'Expected Timeline:',
                 'Budget Range:',
-                'Project Description:',
+                'Project Overview:',
                 '',
-                'Please let me know when we can discuss this further.',
+                'Please let me know your availability for a discussion.',
                 '',
                 'Regards,',
                 'Potential Client'
@@ -60,20 +56,18 @@
         hr: [
             'Hi Mohammed Farhaan!',
             '',
-            'I am contacting you from [Company Name].',
+            'I came across your portfolio and would like to discuss a job opportunity with you (Full-Time / Internship / Remote).',
             '',
-            'We are interested in discussing a potential employment opportunity with you.',
-            '',
-            'Position:',
             'Company:',
+            'Role (Data Science / AI / Python):',
             'Location:',
             '',
-            'Can we discuss this further?'
+            'Can we connect to discuss this further?'
         ].join('\n'),
         freelance: [
             'Hi Mohammed Farhaan!',
             '',
-            'I visited your portfolio and am interested in discussing a freelance project with you.',
+            'I came across your portfolio and would like to discuss a project collaboration with you (Data Analytics / AI / ML / Python).',
             '',
             'Project Type:',
             'Project Details:',
