@@ -17,7 +17,7 @@
             body: [
                 'Hi Mohammed Farhaan,',
                 '',
-                'We came across your portfolio and are interested in discussing an employment opportunity with you.',
+                'We came across your profile and website and are interested in discussing an employment opportunity with you.',
                 '',
                 'Company Name:',
                 'Position (Data Scientist / AI / Python Developer):',
@@ -36,7 +36,7 @@
             body: [
                 'Hi Mohammed Farhaan,',
                 '',
-                'I came across your portfolio and would like to discuss a project with you.',
+                'I came across your website and would like to discuss a project with you.',
                 '',
                 'Project Scope (Data Analytics / Machine Learning / Python / AI Solutions):',
                 'Expected Timeline:',
@@ -56,7 +56,7 @@
         hr: [
             'Hi Mohammed Farhaan!',
             '',
-            'I came across your portfolio and would like to discuss a job opportunity with you (Full-Time / Internship / Remote).',
+            'I came across your website and would like to discuss a job opportunity with you (Full-Time / Internship / Remote).',
             '',
             'Company:',
             'Role (Data Science / AI / Python):',
@@ -67,7 +67,7 @@
         freelance: [
             'Hi Mohammed Farhaan!',
             '',
-            'I came across your portfolio and would like to discuss a project collaboration with you (Data Analytics / AI / ML / Python).',
+            'I came across your website and would like to discuss a project collaboration with you (Data Analytics / AI / ML / Python).',
             '',
             'Project Type:',
             'Project Details:',
@@ -197,18 +197,29 @@
 
         function update() {
             ticking = false;
+
+            /* On mobile and tablet devices (stacked hero layout <= 900px),
+               disable the scroll-driven fade out so buttons ('Explore My Work',
+               'Download Resume') and content remain fully visible and clickable. */
+            if (window.innerWidth <= 900) {
+                heroLeft.style.transform  = '';
+                heroLeft.style.opacity    = '';
+                heroRight.style.transform = '';
+                heroRight.style.opacity   = '';
+                return;
+            }
+
             var scrollY   = window.scrollY;
             var heroH     = heroEl.offsetHeight;
-            /* Travel zone: 0 → 55% of heroH for full fade-out */
-            var travel    = heroH * 0.55;
+            /* Travel zone: on desktop, gently translate and fade as hero leaves viewport */
+            var travel    = heroH * 0.75;
             var progress  = Math.min(1, Math.max(0, scrollY / travel));
 
-            /* ease progress for smoother feel */
             var eased = progress * progress * (3 - 2 * progress); // smoothstep
 
-            var translateX = eased * 80;   /* px — move toward center */
-            var scale      = 1 - eased * 0.06;
-            var opacity    = 1 - eased;
+            var translateX = eased * 60;   /* px — move toward center */
+            var scale      = 1 - eased * 0.04;
+            var opacity    = Math.max(0, 1 - eased * 1.15);
 
             /* Left panel slides right, right panel slides left */
             heroLeft.style.transform  = 'translateX(' + translateX + 'px) scale(' + scale + ')';
@@ -219,6 +230,13 @@
         }
 
         window.addEventListener('scroll', function () {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(update);
+            }
+        }, { passive: true });
+
+        window.addEventListener('resize', function () {
             if (!ticking) {
                 ticking = true;
                 requestAnimationFrame(update);
